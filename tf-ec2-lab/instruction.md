@@ -84,7 +84,10 @@ sudo apt-get install terraform -y
 
 	terraform version
 
-## Step 5: Initialize Terraform
+## Step 5: Create AWS Key-pare
+make sure you have public key (**my-ec2-key**) in AWS created
+
+## Step 6: Initialize Terraform
 
 	terraform init
 
@@ -93,12 +96,12 @@ It ownloads:
     
 -   Initializes project
 
-## Step 6: Validate Terraform Configuration
+## Step 7: Validate Terraform Configuration
 
 	terraform validate
 **Expected:** Success! The configuration is valid.
 
-## Step 7: See What Terraform Will Do (Safe Step)
+## Step 8: See What Terraform Will Do (Safe Step)
 
 	terraform plan
 **It should show:**
@@ -107,7 +110,7 @@ It ownloads:
     
 -   No actual change yet
 
-## Step 8: Apply to Create EC2 Instance Using Terraform
+## Step 9: Apply to Create EC2 Instance Using Terraform
 
 	terraform apply
 Enter a value (type): **yes** to confirm that you would like to create EC2 instance
@@ -122,7 +125,7 @@ instance_id = "i-091fbfcae9216a1bf"
 instance_public_ip = "52.37.138.5"
 instance_name = "ec2-lab-dev"
 ```
-## Step 9: Verify in AWS Console
+## Step 10: Verify in AWS Console
 
 1.  Go to **EC2 → Instances**
     
@@ -133,7 +136,7 @@ instance_name = "ec2-lab-dev"
 
 
 
-## Step 9: Destroy (IMPORTANT)
+## Step 11: Destroy (IMPORTANT)
 
 	terraform destroy
 
